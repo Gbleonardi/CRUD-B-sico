@@ -2,11 +2,15 @@
 function addToTable() {
 
     //Definindo as variaveis e recebendo os dados
-    let name = document.getElementById('name').value;
+    let nome = document.getElementById('nome').value;
     let email = document.getElementById('email').value;
     let phone = document.getElementById('phone').value;
     let work = document.getElementById('work').value;
     let table = document.getElementById("myTable");
+
+
+
+
 
     let tableSize = table.rows.length; //Calculando o tamanho da Tabela
     let row = table.insertRow(tableSize); //Inserindo uma linha abaixo da Tabela
@@ -19,18 +23,18 @@ function addToTable() {
     row.id = tableSize; //Adicionando o id no elemento a ser criado
 
     //Criando o codigo do botão para remover a linha
-    let btnCode = "<button class='remove-btn' onclick='removeToTable(this)'>Remover</button>";
+    let btnCode = "<button class='remove-btn' onclick='removeToTable(this)'>Excluir</button>";
 
     //Preenchendo as celulas da linha
     cell1.innerHTML = tableSize;
-    cell2.innerHTML = name;
+    cell2.innerHTML = nome;
     cell3.innerHTML = email;
     cell4.innerHTML = phone;
     cell5.innerHTML = work;
     cell6.innerHTML = btnCode;
 
     //Limpando os campos de inserção de dados
-    document.getElementById('name').value = "";
+    document.getElementById('nome').value = "";
     document.getElementById('email').value = "";
     document.getElementById('phone').value = "";
     document.getElementById('work').value = "";
